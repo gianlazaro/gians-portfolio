@@ -1,5 +1,5 @@
 import Header from "../components/Header"
-import styled from "styled-components"
+import styled, {keyframes} from "styled-components"
 import MainContainerBox from "../components/MainContainerBox"
 import SideContainerBox from "../components/SideContainerBox"
 import Footer from "../components/Footer"
@@ -13,7 +13,7 @@ function App() {
       </div>
       <div className="mainContent">
         <MainContainerBox>
-          <h2>Hello! 👋🏼</h2>
+          <h2>Hello! <span className="wave">👋🏼</span></h2>
           <p>I'm Gian.</p>
           <p>I am a front-end web developer looking for opportunities to learn and grow. I enjoy the small, but neccesary, details from <em>accessibility</em> to <em>performance metrics</em>. </p>
           <p>Let us connect! <a href="mailto:hello@gianlazaro.com">Send an e-mail.</a></p>
@@ -36,6 +36,17 @@ function App() {
     </Wrapper>
   )
 }
+
+const wavingAnimation =   keyframes`
+  0% { transform: rotate( 0.0deg) }
+ 10% { transform: rotate(14.0deg) }  
+ 20% { transform: rotate(-8.0deg) }
+ 30% { transform: rotate(14.0deg) }
+ 40% { transform: rotate(-4.0deg) }
+ 50% { transform: rotate(10.0deg) }
+ 60% { transform: rotate( 0.0deg) }  
+100% { transform: rotate( 0.0deg) }
+`;
 
 let Wrapper = styled.div`
   max-width: 960px;
@@ -78,6 +89,15 @@ let Wrapper = styled.div`
   & > .footer {
     grid-area: footer;
   }
+
+
+  & .wave {
+    animation: ${wavingAnimation} 2.5s;
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+    animation-delay: 1s;
+  }
+
 `
 
 
