@@ -27,9 +27,15 @@ function App() {
         </MainContainerBox>
       </div>
       <div className="rightPane">
-        <SideContainerBox>
+        <SideContainerBox className="webtechologies">
           <h2>Web Technologies</h2>
-          <span></span>
+          <ul className="pills_container">
+            <li className="pill">HTML</li>
+            <li className="pill">CSS</li>
+            <li className="pill">Javascript</li>
+            <li className="pill">ReactJS</li>
+            <li className="pill">styled-components</li>
+          </ul>
         </SideContainerBox>
       </div>
       <Footer/>
@@ -60,7 +66,7 @@ let Wrapper = styled.div`
                        'footer footer footer' 10%;
   grid-template-columns: 1fr 1fr 30%;
 
- @media (max-width: 500px) {
+ @media (max-width: 650px) {
   grid-template: 'header header header' min-content
                        'main main main' 1fr
                        'footer footer footer' min-content;
@@ -68,7 +74,7 @@ let Wrapper = styled.div`
 
   & > .navigation {
     grid-area: navigation;
-    @media (max-width: 500px) {
+    @media (max-width: 650px) {
       display: none;
     }
   }
@@ -80,7 +86,7 @@ let Wrapper = styled.div`
   & > .rightPane {
     grid-area: rightPane;
 
-    @media (max-width: 500px) {
+    @media (max-width: 650px) {
       display: none;
     }
 

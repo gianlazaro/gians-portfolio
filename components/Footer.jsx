@@ -15,7 +15,7 @@ let Wrapper = styled.div`
    `;
 
 let Content = styled.div`
-   background-color: hsl(47deg 100% 68% /1 );
+   background-color: #333;
    border-radius: 15px 15px 0 0;
    height: 100%;
    box-shadow: var(--shadow-elevation-low);
