@@ -35,8 +35,8 @@ padding: 8px 24px 18px 24px;
 
 & .pill{
    display: inline-block;
-   background-color: hsl(227deg 94% 0% / 1);;
-   color: white;
+   background-color: #F5F7FF;
+   color: #333;
    border-radius: 5px;
    padding: 1px 5px;
    margin: 0px 2px 2px 0px;
