@@ -21,7 +21,7 @@ let Wrapper = styled.div`
 
 let Box = styled.div`
 margin: 24px 0px;
-padding: 8px 24px 24px 24px;
+padding: 8px 24px 18px 24px;
 
 // WEB TECHNOLOGIES PANEL
 & .pills_container {
